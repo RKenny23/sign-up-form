@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+}
+
+h1 {
+  color: red;
+}
+
+img {
+  width: 600px;
+  /* height: 100vh; */
+  /* position: absolute; */
+  z-index: -1;
+  overflow: hidden;
+}
+
+.image-section {
+  display: flex;
+}
+
+.logo-box {
+  background-color: rgba(0,0,0,0.2);
+  margin-top: 8rem;
+  position: absolute;
+  padding: 2rem;
+  width: 600px;
+  display: flex;
+}
+.logo {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+main {
+  height: 100vh;
+  background-color: rgb(245, 245, 245);
+}
+
+form {
+  background-color: #fff;
+  margin-top: 2rem;
+  padding: 2rem;
+}
