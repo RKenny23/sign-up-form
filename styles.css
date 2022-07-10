@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,20 +7,41 @@
 }
 
 body {
-  background-color:black;
+  background-color:rgb(0, 70, 0);
   display: flex;
   justify-content: center;
   overflow-y: hidden;
+  font-family: 'Roboto', sans-serif;
+  /* background-image: url("./nature.jpeg");
+  background-repeat: no-repeat; */
 }
 
-img {
-  z-index: -1;
-  overflow: hidden;
+/* .image {
+  background-image: url("./nature.jpeg");
+  background-repeat: no-repeat;
+
+} */
+
+h2 {
+  font-weight: 400;
 }
 
 .image-section {
   display: flex;
-  position: relative;
+  position: sticky;
+  left: 0;
+}
+
+.text-box {
+  position: absolute;
+  width: 100%;
+  margin-top: 10rem;
+  padding: 2rem;
+  background-color: rgba(255,255,255,0.23);
+}
+
+.logo {
+  width: 100%;
 }
 
 .image-section p {
@@ -36,22 +59,10 @@ img {
   color: inherit;
 }
 
-.logo-box {
-  background-color: rgba(0,0,0,0.2);
-  margin-top: 10rem;
-  position: absolute;
-  padding: 2rem;
-  width: 100%;
-  display: flex;
-}
-.logo {
-  width: 500px;
-  display: block;
-  margin: 0 auto;
-}
 
 main {
-  width: 45vw;
+  position:relative;
+  width: 45%;
   min-width: fit-content;
   background-color: rgb(245, 245, 245);
   padding-top: 6rem;
@@ -59,23 +70,23 @@ main {
 
 main h2 {
   padding: 2.5rem;
-  width: 600px;
+  width: 650px;
 }
 
-main > p {
+main p {
   padding-left: 2.5rem;
+  font-size: 1.2rem;
 }
 
 main a {
   text-decoration: none;
   color: green;
-  font-weight: bold;
+  font-weight: 500;
 }
-
 
 .form-area {
   margin-top: 2rem;
-  padding: 0 0 1rem 2.5rem;
+  padding: 0 0 3rem 2.5rem;
   background-color: #fff;
   box-shadow: 0 8px 10px -10px gray;
 }
@@ -84,24 +95,41 @@ main a {
   padding: 1.5rem 0;
 }
 
-form {
+#form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 50px;
+  row-gap: 25px;
   width: 600px;
 }
 
 label {
   text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  padding-bottom: 3px;
 }
 
 input {
   width: 250px;
   height: 30px;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   border: 1px solid lightgray;
   border-radius: 5px;
+  font-size: 0.9rem;
+  padding-left: 8px;
 }
+
+input:focus {
+  /* border: 1px solid blue; */
+  outline: 1px solid blue;
+  box-shadow: 0 1px 5px 1px gray;
+
+}
+
+/* input.success {
+  outline: 1px solid green;
+} */
 
 button {
   width: 220px;
@@ -115,4 +143,35 @@ button {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgreen;
+  transition: all 0.3s;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control.success input {
+  border-color: green;
+}
+
+.input-control.error input {
+  border-color: red;
+}
+
+.input-control .error {
+  font-size: 0.8rem;
+  color:red;
+  padding-top: 8px;
+  height: 12px;
+
+}
+
+.box {
+  width: 80vw;
+  background-color: rgb(0, 19, 0);
 }

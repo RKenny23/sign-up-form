@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
   </head>
   <body>
     <div class="image-section">
+      <!-- <div class="image"></div> -->
       <img src="nature.jpeg" />
-      <div class="logo-box">
+      <div class="text-box">
         <object type="image/svg+xml" data="KENNY.svg" class="logo">
           Kenny & Kenny Logo
         </object>
@@ -24,24 +26,59 @@
     <main>
       <h2>
         Sign up today for this online publishing service! You need something
-        like this in your life to realize your deepest dreams. <br /><br />You
-        <em>know</em> you want to.
+        like this in your life to help you realize your deepest dreams.
+        <br /><br />You <em>know</em> you want to.
       </h2>
       <div class="form-area">
         <h2>Let's do this!</h2>
         <form id="form" method="get" action="">
-          <label for="fname">First name</label>
+          <!-- <label for="fname">First name</label>
           <label for="lname">Last name</label>
           <input type="text" id="fname" name="fname" />
           <input type="text" id="lname" name="lname" />
           <label for="email">Email</label>
           <label for="phone">Phone number</label>
           <input type="email" id="email" name="email" />
-          <input type="text" id="lname" name="lname" />
+          <input type="text" id="phone" name="phone" />
           <label for="password">Password</label>
           <label for="cpassword">Confirm password</label>
-          <input type="password" id="password" name="password" />
-          <input type="password" id="cpassword" name="cpassword" />
+          <input type="password" id="password" class="error" name="password" />
+          <input type="password" id="cpassword" class="error" name="cpassword" /> -->
+          <div class="input-control">
+            <label for="fname">first name</label>
+            <input onblur="" type="text" id="fname" name="fname" />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control">
+            <label for="lname">last name</label>
+            <input type="text" id="lname" name="lname" />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control">
+            <label for="email">email</label>
+            <input type="text" id="email" name="email" />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control">
+            <label for="phone">phone</label>
+            <input type="text" id="phone" name="phone" maxlength="10" />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control">
+            <label for="password">password</label>
+            <input type="password" id="password" name="password" />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control">
+            <label for="cpassword">confirm password</label>
+            <input type="password" id="cpassword" name="cpassword" />
+            <div class="error"></div>
+          </div>
         </form>
       </div>
       <button type="submit" form="form">Create Account</button>
