@@ -63,12 +63,6 @@ fName.addEventListener('blur', (e) => {
   checkFnameValue();
 });
 
-// inputs.forEach((input) => {
-//   input.addEventListener('input', (e) => {
-//     setSuccess(input.id);
-//   });
-// });
-
 function checkLnameValue() {
   const lNameValue = lName.value.trim();
 
