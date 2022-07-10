@@ -8,6 +8,8 @@ const phone = document.getElementById('phone');
 const password = document.getElementById('password');
 const cPassword = document.getElementById('cpassword');
 
+const inputs = document.getElementsByName('input');
+
 form.addEventListener('submit', (e) => {
   if (
     !checkFnameValue() ||
@@ -60,6 +62,12 @@ function checkFnameValue() {
 fName.addEventListener('blur', (e) => {
   checkFnameValue();
 });
+
+// inputs.forEach((input) => {
+//   input.addEventListener('input', (e) => {
+//     setSuccess(input.id);
+//   });
+// });
 
 function checkLnameValue() {
   const lNameValue = lName.value.trim();
@@ -125,10 +133,6 @@ phone.addEventListener('blur', (e) => {
   checkPhoneValue();
 });
 
-// phone.addEventListener('input', (e) => {
-//   checkPhoneValue();
-// });
-
 // Validate password input
 // Make sure password contains at least one digit, one lower case, one upper case, at least 8 characters.
 const isValidPassword = (password) => {
@@ -171,22 +175,6 @@ function checkCpasswordValue() {
   }
 }
 
-cPassword.addEventListener('blur', (e) => {
+cPassword.addEventListener('input', (e) => {
   checkCpasswordValue();
 });
-
-// inputs.forEach((input) => {
-//   input.addEventListener('blur', (e) => {
-//     if (
-//       !checkNameValues() ||
-//       !checkEmailValue() ||
-//       !checkPhoneValue() ||
-//       !checkPasswordValue() ||
-//       !checkCpasswordValue()
-//     ) {
-//       setSuccess(e.target);
-//     } else {
-//       setError(e.target, 'First name is required.');
-//     }
-//   });
-// });
