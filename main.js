@@ -2,7 +2,6 @@ const form = document.getElementById('form');
 
 const fName = document.getElementById('fname');
 const lName = document.getElementById('lname');
-
 const email = document.getElementById('email');
 const phone = document.getElementById('phone');
 const password = document.getElementById('password');
