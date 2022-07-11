@@ -8,7 +8,7 @@ const phone = document.getElementById('phone');
 const password = document.getElementById('password');
 const cPassword = document.getElementById('cpassword');
 
-const inputs = document.getElementsByName('input');
+const thanks = document.getElementById('thanks');
 
 form.addEventListener('submit', (e) => {
   if (
@@ -21,10 +21,8 @@ form.addEventListener('submit', (e) => {
   ) {
     e.preventDefault();
   } else {
-    form.submit();
-    console.log('Form submitted!');
-
-    alert('Form submitted!');
+    thanks.style = 'display: flex';
+    setTimeout(form.submit(), 10000);
   }
 });
 
@@ -63,6 +61,10 @@ fName.addEventListener('blur', (e) => {
   checkFnameValue();
 });
 
+fName.addEventListener('input', (e) => {
+  setSuccess(fName);
+});
+
 function checkLnameValue() {
   const lNameValue = lName.value.trim();
 
@@ -76,6 +78,10 @@ function checkLnameValue() {
 
 lName.addEventListener('blur', (e) => {
   checkLnameValue();
+});
+
+lName.addEventListener('input', (e) => {
+  setSuccess(lName);
 });
 
 // Validate email input
@@ -104,6 +110,10 @@ email.addEventListener('blur', (e) => {
   checkEmailValue();
 });
 
+email.addEventListener('input', (e) => {
+  setSuccess(email);
+});
+
 // Validate Phone input
 const isValidPhone = (phone) => {
   const re = /[\d]{10,}/;
@@ -125,6 +135,10 @@ function checkPhoneValue() {
 
 phone.addEventListener('blur', (e) => {
   checkPhoneValue();
+});
+
+phone.addEventListener('input', (e) => {
+  setSuccess(phone);
 });
 
 // Validate password input
@@ -154,6 +168,10 @@ password.addEventListener('blur', (e) => {
   checkPasswordValue();
 });
 
+password.addEventListener('input', (e) => {
+  setSuccess(password);
+});
+
 // Validate password confirmation input
 function checkCpasswordValue() {
   const cPasswordValue = cPassword.value.trim();
@@ -170,5 +188,9 @@ function checkCpasswordValue() {
 }
 
 cPassword.addEventListener('input', (e) => {
+  setSuccess(cPassword);
+});
+
+cPassword.addEventListener('blur', (e) => {
   checkCpasswordValue();
 });

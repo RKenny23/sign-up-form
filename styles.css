@@ -121,7 +121,6 @@ input {
 }
 
 input:focus {
-  /* border: 1px solid blue; */
   outline: 1px solid blue;
   box-shadow: 0 1px 5px 1px gray;
 
@@ -177,7 +176,13 @@ button:hover {
 
 }
 
-.box {
-  width: 80vw;
-  background-color: rgb(0, 19, 0);
+.container {
+  display: flex;
+  align-items: center;
+}
+
+#thanks {
+  font-size: 1.2rem;
+  color: green;
+  display: none;
 }
