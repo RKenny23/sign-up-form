@@ -21,7 +21,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
   } else {
     thanks.style = 'display: flex';
-    setTimeout(form.submit(), 10000);
+    setTimeout(form.submit(), 5000);
   }
 });
 
